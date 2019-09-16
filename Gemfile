@@ -1,9 +1,3 @@
-source 'https://rubygems.org'
+ENV['BUNDLE_GEMFILE'] = File.expand_path('../Gemfile-rails-5.0.x', __FILE__)
 
-if ENV['RAILS_VERSION']
-  gem 'rails', "~> #{ENV['RAILS_VERSION']}"
-else
-  gem 'rails', '<= 5.2', '>= 4.0'
-end
-
-gemspec
+Bundler.load
